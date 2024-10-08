@@ -10,7 +10,7 @@ public class MachineGunGun extends Gun implements IMachineGun{
 
     private boolean isExploded = false;
 
-    private int rateOfFire;
+    private int rateOfFire; //Темп срельбы
 
 
     public MachineGunGun(String mf, String model, int capacity, int fireRate) {
