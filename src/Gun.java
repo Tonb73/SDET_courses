@@ -1,11 +1,29 @@
+
+/**
+ * Класс оружие со свойствами <b>manufacturer</b>, <b>model</b>, <b>magCap</b>,<b>gunCount</b>  .
+ * @autor Tonby73
+ * @version 1
+ */
 public abstract class Gun {
-    private String manufacturer; //Страна производитель
-    private String model; //Модель оружия
 
-    private int magCap; //Емкость магазина
+    /** Поле производитель */
+    private String manufacturer;
 
-    private static int gunCount = 0; // Подсчет экземпляров оружия
+    /** Поле модель */
+    private String model;
 
+    /** Поле Емкость магазина */
+    private int magCap;
+
+    /** Поле Подсчет экземпляров оружия */
+    private static int gunCount = 0;
+
+    /**
+     * Конструктор - создание нового объекта с определенными значениями
+     * @param mf - производитель
+     * @param model - модель
+     * @param capacity - емкость магазина
+     */
     public Gun(String mf, String model, int capacity){
         this.manufacturer = mf;
         this.model = model;
@@ -13,6 +31,9 @@ public abstract class Gun {
         gunCount++;
     }
 
+    /**
+     * Метод демонстрации информации об объекте через консоль
+     */
     public void showGunInfo(){
 
         System.out.println("Производитель:" + manufacturer);
@@ -20,19 +41,35 @@ public abstract class Gun {
         System.out.println("Емкость магазина:" + magCap);
     }
 
-    public static int getGunCount() { //геттер для получения кол-во экземпляров оружия
+    /**
+     * Метод получения значения поля {@link Gun#gunCount}
+     * @return возвращает  кол-во экземпляров оружия
+     */
+    public static int getGunCount() {
         return gunCount;
     }
 
-    public String getManufacturer() { //геттер для производителя
+    /**
+     * Метод получения значения поля {@link Gun#manufacturer}
+     * @return возвращает наименования производителя
+     */
+    public String getManufacturer() {
         return manufacturer;
     }
 
-    public String getModel() { //геттер для модели
+    /**
+     * Метод получения значения поля {@link Gun#model}
+     * @return возвращает наименования модели
+     */
+    public String getModel() {
         return model;
     }
 
-    public int getMagCap() { //геттер для емкости магазина
+    /**
+     * Метод получения значения поля {@link Gun#magCap}
+     * @return возвращает емкость магазина
+     */
+    public int getMagCap() {
         return magCap;
     }
 }
